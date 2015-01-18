@@ -12,7 +12,7 @@ import view.ui.Frame;
 
 public class ExchangeOperation {
 
-    private Frame frmMain;
+    private Frame frame;
     private final CurrencySet currencySet;
     private final ExchangeRateSet rateSet;
 
@@ -24,7 +24,7 @@ public class ExchangeOperation {
     public void execute() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            frmMain = new Frame(currencySet.toArray(), rateSet);
+            frame = new Frame(currencySet.toArray(), rateSet);
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(ExchangeOperation.class.getName()).log(Level.SEVERE, null, ex);
         }
